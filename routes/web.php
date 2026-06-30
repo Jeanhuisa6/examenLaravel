@@ -16,3 +16,6 @@ Route::post('/api/productos', [ApiProductoController::class, 'store']);
 
 Route::get('/api/categorias', [ApiCategoriaController::class, 'index']);
 Route::post('/api/categorias', [ApiCategoriaController::class, 'store']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
